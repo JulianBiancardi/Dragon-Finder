@@ -1,8 +1,8 @@
-package com.chiki.dragonpearl;
+package com.chiki.dragonfinder;
 
+import com.chiki.dragonfinder.item.ModItems;
 import com.mojang.logging.LogUtils;
 import net.minecraft.world.level.block.Block;
-import net.minecraft.world.level.block.Blocks;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.event.RegistryEvent;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
@@ -18,14 +18,14 @@ import org.slf4j.Logger;
 import java.util.stream.Collectors;
 
 // The value here should match an entry in the META-INF/mods.toml file
-@Mod(DragonPearl.MODID)
-public class DragonPearl
+@Mod(DragonFinder.MODID)
+public class DragonFinder
 {
-    public static final String MODID = "dragonpearl";
+    public static final String MODID = "dragonfinder";
     // Directly reference a slf4j logger
     private static final Logger LOGGER = LogUtils.getLogger();
 
-    public DragonPearl()
+    public DragonFinder()
     {
         // Register the setup method for modloading
         FMLJavaModLoadingContext.get().getModEventBus().addListener(this::setup);
@@ -36,13 +36,12 @@ public class DragonPearl
 
         // Register ourselves for server and other game events we are interested in
         MinecraftForge.EVENT_BUS.register(this);
+
+        ModItems.register(FMLJavaModLoadingContext.get().getModEventBus());
     }
 
     private void setup(final FMLCommonSetupEvent event)
     {
-        // some preinit code
-        LOGGER.info("HELLO FROM PREINIT");
-        LOGGER.info("DIRT BLOCK >> {}", Blocks.DIRT.getRegistryName());
     }
 
     private void enqueueIMC(final InterModEnqueueEvent event)

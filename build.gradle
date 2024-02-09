@@ -42,8 +42,8 @@ repositories{
 }
 
 version = '1.0'
-group = 'com.chiki.dragonpearl' // http://maven.apache.org/guides/mini/guide-naming-conventions.html
-archivesBaseName = 'dragonpearl'
+group = 'com.chiki.dragonfinder' // http://maven.apache.org/guides/mini/guide-naming-conventions.html
+archivesBaseName = 'dragonfinder'
 
 // Mojang ships Java 17 to end users in 1.18+, so your mod should target Java 17.
 java.toolchain.languageVersion = JavaLanguageVersion.of(17)
@@ -194,7 +194,7 @@ dependencies {
 jar {
     manifest {
         attributes([
-                "Specification-Title"     : "dragonpearl",
+                "Specification-Title"     : "dragonfinder",
                 "Specification-Vendor"    : "chiki",
                 "Specification-Version"   : "1", // We are version 1 of ourselves
                 "Implementation-Title"    : project.name,

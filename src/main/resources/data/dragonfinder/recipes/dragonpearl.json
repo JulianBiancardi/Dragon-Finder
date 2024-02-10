@@ -2,15 +2,19 @@
   "type": "minecraft:crafting_shaped",
   "pattern": [
     "###",
-    "###",
+    "#S#",
     "###"
   ],
   "key": {
     "#": {
-      "item": "iceandfire:fire_dragon_flesh"
+      "item": "minecraft:ender_eye"
+    },
+    "S": {
+      "item": "iceandfire:fire_dragon_heart"
     }
   },
   "result": {
-    "item": "dragonfinder:dragonpearl"
+    "item": "dragonfinder:dragonpearl",
+    "count": 10
   }
 }

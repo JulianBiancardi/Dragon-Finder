@@ -15,11 +15,11 @@ public class ModItems {
             () -> new Item(
                     new Item.Properties()
                             .stacksTo(64)
-                            .food(new FoodProperties.Builder().nutrition(10).build())
+                            .food(new FoodProperties.Builder().nutrition(20).build())
                             .tab(ModCreativeModeTab.CREATIVE_MODE_TAB)));
 
     public static final RegistryObject<Item> DRAGON_PEARL = ITEMS.register("dragonpearl",
-            () -> new Item(
+            () -> new ItemDragonEye(
                     new Item.Properties()
                             .stacksTo(1)
                             .tab(ModCreativeModeTab.CREATIVE_MODE_TAB)));

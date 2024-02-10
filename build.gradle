@@ -175,6 +175,8 @@ dependencies {
     compileOnly fg.deobf("mezz.jei:jei-1.18.2-forge-api:10.2.1.283")
     runtimeOnly fg.deobf("mezz.jei:jei-1.18.2-forge:10.2.1.283")
     implementation "curse.maven:citadel-331936:3783098"
+
+    compileOnly fg.deobf("curse.maven:iceandfire-264231:4614465")
     runtimeOnly fg.deobf("curse.maven:iceandfire-264231:4614465")
 
     // Real mod deobf dependency examples - these get remapped to your current mappings

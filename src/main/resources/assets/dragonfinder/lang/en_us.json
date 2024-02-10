@@ -2,5 +2,7 @@
   "item.dragonfinder.coocked_fire_dragon_flesh": "Coocked Fire Dragon Flesh",
   "item.dragonfinder.dragonpearl": "Dragon Pearl",
 
+  "item.dragonfinder.dragonpearl.nonfound": "There is no fire dragons",
+
   "itemGroup.dragonfinder": "Draogn Finder Items"
 }

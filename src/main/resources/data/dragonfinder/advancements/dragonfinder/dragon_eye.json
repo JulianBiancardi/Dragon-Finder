@@ -1,0 +1,28 @@
+{
+  "display": {
+    "icon": {
+      "item": "dragonfinder:fire_dragon_eye"
+    },
+    "title": {
+      "translate": "advancements.dragonfinder.dragon_eye.title"
+    },
+    "description": {
+      "translate": "advancements.dragonfinder.dragon_eye.description"
+    }
+  },
+  "parent": "iceandfire:iceandfire/kill_if_dragon",
+  "criteria": {
+    "bestiary": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "dragonfinder:fire_dragon_eye"
+            ]
+          }
+        ]
+      }
+    }
+  }
+}

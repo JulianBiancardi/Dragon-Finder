@@ -9,5 +9,8 @@
 
   "item.dragonfinder.dragoneye.nonfound": "There is no dragons",
 
-  "itemGroup.dragonfinder": "Draogn Finder Items"
+  "itemGroup.dragonfinder": "Draogn Finder Items",
+
+  "advancements.dragonfinder.dragon_eye.title": "Find them all",
+  "advancements.dragonfinder.dragon_eye.description": "Create a dragon eye"
 }

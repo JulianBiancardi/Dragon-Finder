@@ -27,7 +27,7 @@ public class ItemDragonEye extends Item {
     public InteractionResultHolder<ItemStack> use(Level level, Player player, InteractionHand interactionHand) {
 
         if(!level.isClientSide() && interactionHand == InteractionHand.MAIN_HAND ){
-            player.getCooldowns().addCooldown(this, 20);
+            //player.getCooldowns().addCooldown(this, 20);
             ItemStack itemStack = player.getItemInHand(interactionHand);
 
             Entity dragon = findNearestDragons(level, player);

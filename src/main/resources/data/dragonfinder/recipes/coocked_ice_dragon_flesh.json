@@ -1,0 +1,9 @@
+{
+  "type": "minecraft:smelting",
+  "ingredient": {
+    "item": "iceandfire:ice_dragon_flesh"
+  },
+  "result": "dragonfinder:coocked_ice_dragon_flesh",
+  "experience": 0.35,
+  "cookingtime": 200
+}

@@ -27,12 +27,13 @@ public class ItemDragonEye extends Item {
     public InteractionResultHolder<ItemStack> use(Level level, Player player, InteractionHand interactionHand) {
 
         if(!level.isClientSide() && interactionHand == InteractionHand.MAIN_HAND ){
+            player.getCooldowns().addCooldown(this, 20);
             ItemStack itemStack = player.getItemInHand(interactionHand);
 
             Entity dragon = findNearestDragons(level, player);
 
             if (dragon == null) {
-                player.sendMessage(new TranslatableComponent("item." + DragonFinder.MODID + ".dragonpearl.nonfound"), player.getUUID());
+                player.sendMessage(new TranslatableComponent("item." + DragonFinder.MODID + ".dragoneye.nonfound"), player.getUUID());
                 if(!player.isCreative()){
                     itemStack.shrink(1);
                 }
@@ -60,7 +61,7 @@ public class ItemDragonEye extends Item {
         List<EntityFireDragon> fireDragons = level.getEntitiesOfClass(EntityFireDragon.class, aabb, (dragon -> dragon.getDragonStage() >= stageMin));
         List<EntityLightningDragon> lightningDragons = level.getEntitiesOfClass(EntityLightningDragon.class, aabb, (dragon -> dragon.getDragonStage() >= stageMin));
 
-        if (iceDragons.size() == 0 && fireDragons.size() == 0) {
+        if (iceDragons.size() == 0 && fireDragons.size() == 0 && lightningDragons.size() == 0) {
             return null;
         }
 

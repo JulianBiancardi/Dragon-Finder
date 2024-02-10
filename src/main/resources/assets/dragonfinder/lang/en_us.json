@@ -1,9 +1,13 @@
 {
   "item.dragonfinder.coocked_fire_dragon_flesh": "Coocked Fire Dragon Flesh",
-  "item.dragonfinder.dragonpearl": "Dragon Pearl",
-  "item.dragonfinder.ice_dragon_eye": "Ice Dragon Eye",
+  "item.dragonfinder.coocked_ice_dragon_flesh": "Coocked Ice Dragon Flesh",
+  "item.dragonfinder.coocked_lightning_dragon_flesh": "Coocked Lightning Dragon Flesh",
 
-  "item.dragonfinder.dragonpearl.nonfound": "There is no fire dragons",
+  "item.dragonfinder.fire_dragon_eye": "Fire Dragon Eye",
+  "item.dragonfinder.ice_dragon_eye": "Ice Dragon Eye",
+  "item.dragonfinder.lightning_dragon_eye": "Lightning Dragon Eye",
+
+  "item.dragonfinder.dragoneye.nonfound": "There is no dragons",
 
   "itemGroup.dragonfinder": "Draogn Finder Items"
 }

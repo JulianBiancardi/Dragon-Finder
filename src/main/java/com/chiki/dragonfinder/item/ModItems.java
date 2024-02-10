@@ -18,7 +18,19 @@ public class ModItems {
                             .food(new FoodProperties.Builder().nutrition(20).build())
                             .tab(ModCreativeModeTab.CREATIVE_MODE_TAB)));
 
-    public static final RegistryObject<Item> DRAGON_PEARL = ITEMS.register("dragonpearl",
+    public static final RegistryObject<Item> FIRE_DRAGON_EYE = ITEMS.register("fire_dragon_eye",
+            () -> new ItemDragonEye(
+                    new Item.Properties()
+                            .stacksTo(1)
+                            .tab(ModCreativeModeTab.CREATIVE_MODE_TAB)));
+
+    public static final RegistryObject<Item> ICE_DRAGON_EYE = ITEMS.register("ice_dragon_eye",
+            () -> new ItemDragonEye(
+                    new Item.Properties()
+                            .stacksTo(1)
+                            .tab(ModCreativeModeTab.CREATIVE_MODE_TAB)));
+
+    public static final RegistryObject<Item> LIGHTNING_DRAGON_EYE = ITEMS.register("lightning_dragon_eye",
             () -> new ItemDragonEye(
                     new Item.Properties()
                             .stacksTo(1)

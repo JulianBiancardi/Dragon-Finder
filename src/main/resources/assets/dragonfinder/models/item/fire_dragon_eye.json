@@ -1,6 +1,6 @@
 {
   "parent": "item/generated",
   "textures": {
-    "layer0": "dragonfinder:item/dragonpearl"
+    "layer0": "dragonfinder:item/fire_dragon_eye"
   }
 }

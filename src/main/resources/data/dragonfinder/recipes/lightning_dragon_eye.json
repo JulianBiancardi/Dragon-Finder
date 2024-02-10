@@ -1,0 +1,20 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "###",
+    "#S#",
+    "###"
+  ],
+  "key": {
+    "#": {
+      "item": "minecraft:ender_eye"
+    },
+    "S": {
+      "item": "iceandfire:lightning_dragon_heart"
+    }
+  },
+  "result": {
+    "item": "dragonfinder:lightning_dragon_eye",
+    "count": 10
+  }
+}

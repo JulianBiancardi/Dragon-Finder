@@ -5,6 +5,8 @@ import com.github.alexthe666.iceandfire.entity.EntityFireDragon;
 import com.github.alexthe666.iceandfire.entity.EntityIceDragon;
 import com.github.alexthe666.iceandfire.entity.EntityLightningDragon;
 import net.minecraft.network.chat.TranslatableComponent;
+import net.minecraft.sounds.SoundEvents;
+import net.minecraft.sounds.SoundSource;
 import net.minecraft.world.InteractionHand;
 import net.minecraft.world.InteractionResultHolder;
 import net.minecraft.world.entity.Entity;
@@ -16,6 +18,7 @@ import net.minecraft.world.level.Level;
 import net.minecraft.world.phys.AABB;
 
 import java.util.List;
+import java.util.concurrent.ThreadLocalRandom;
 
 public class ItemDragonEye extends Item {
 
@@ -34,16 +37,16 @@ public class ItemDragonEye extends Item {
 
             if (dragon == null) {
                 player.sendMessage(new TranslatableComponent("item." + DragonFinder.MODID + ".dragoneye.nonfound"), player.getUUID());
-                if(!player.isCreative()){
-                    itemStack.shrink(1);
-                }
                 return super.use(level, player, interactionHand);
             }
 
             EyeOfEnder finderEntity = new EyeOfEnder(level, player.position().x, player.getY(0.5D), player.position().z);
             finderEntity.setItem(itemStack);
             finderEntity.signalTo(dragon.blockPosition());
+            finderEntity.surviveAfterDeath = ThreadLocalRandom.current().nextInt(0, 9) >= 3;
             level.addFreshEntity(finderEntity);
+            level.playSound(null, player.blockPosition(), SoundEvents.ENDER_EYE_LAUNCH, SoundSource.NEUTRAL, 0.5F, 0.4F / (level.getRandom().nextFloat() * 0.4F + 0.8F));
+            level.levelEvent(null, 1003, player.blockPosition(), 0);
 
             if(!player.isCreative()){
                 itemStack.shrink(1);

@@ -4,7 +4,7 @@ import com.chiki.dragonfinder.DragonFinder;
 import com.github.alexthe666.iceandfire.entity.EntityFireDragon;
 import com.github.alexthe666.iceandfire.entity.EntityIceDragon;
 import com.github.alexthe666.iceandfire.entity.EntityLightningDragon;
-import net.minecraft.network.chat.TranslatableComponent;
+import net.minecraft.network.chat.Component;
 import net.minecraft.sounds.SoundEvents;
 import net.minecraft.sounds.SoundSource;
 import net.minecraft.world.InteractionHand;
@@ -28,7 +28,6 @@ public class ItemDragonEye extends Item {
 
     @Override
     public InteractionResultHolder<ItemStack> use(Level level, Player player, InteractionHand interactionHand) {
-
         if(!level.isClientSide() && interactionHand == InteractionHand.MAIN_HAND ){
             //player.getCooldowns().addCooldown(this, 20);
             ItemStack itemStack = player.getItemInHand(interactionHand);
@@ -36,7 +35,7 @@ public class ItemDragonEye extends Item {
             Entity dragon = findNearestDragons(level, player);
 
             if (dragon == null) {
-                player.sendMessage(new TranslatableComponent("item." + DragonFinder.MODID + ".dragoneye.nonfound"), player.getUUID());
+                player.sendSystemMessage(Component.translatable("item." + DragonFinder.MODID + ".dragoneye.nonfound"));
                 return super.use(level, player, interactionHand);
             }
 
@@ -61,7 +60,7 @@ public class ItemDragonEye extends Item {
         AABB aabb = AABB.ofSize(player.position(),boxSize,boxSize,boxSize);
         int stageMin = 4;
         List<EntityIceDragon> iceDragons = level.getEntitiesOfClass(EntityIceDragon.class, aabb, (dragon -> dragon.getDragonStage() >= stageMin));
-        List<EntityFireDragon> fireDragons = level.getEntitiesOfClass(EntityFireDragon.class, aabb, (dragon -> dragon.getDragonStage() >= stageMin));
+        List<EntityFireDragon> fireDragons = level.getEntitiesOfClass(EntityFireDragon.class, aabb, (dragon ->dragon.getDragonStage() >= stageMin));
         List<EntityLightningDragon> lightningDragons = level.getEntitiesOfClass(EntityLightningDragon.class, aabb, (dragon -> dragon.getDragonStage() >= stageMin));
 
         if (iceDragons.size() == 0 && fireDragons.size() == 0 && lightningDragons.size() == 0) {

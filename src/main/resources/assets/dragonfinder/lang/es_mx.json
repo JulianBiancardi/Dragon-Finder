@@ -1,0 +1,16 @@
+{
+  "item.dragonfinder.coocked_fire_dragon_flesh": "Carne cocida de dragon de fuego",
+  "item.dragonfinder.coocked_ice_dragon_flesh": "Carne cocida de dragon de hielo",
+  "item.dragonfinder.coocked_lightning_dragon_flesh": "Carne cocida de dragon eléctrico",
+
+  "item.dragonfinder.fire_dragon_eye": "Ojo de dragon de fuego",
+  "item.dragonfinder.ice_dragon_eye": "Ojo de dragon de hielo",
+  "item.dragonfinder.lightning_dragon_eye": "Ojo de dragon eléctrico",
+
+  "item.dragonfinder.dragoneye.nonfound": "No hay dragones",
+
+  "itemGroup.dragonfinder": "Draogn Finder Items",
+
+  "advancements.dragonfinder.dragon_eye.title": "Encuentralos a todos",
+  "advancements.dragonfinder.dragon_eye.description": "Crea un ojo de dragon"
+}
